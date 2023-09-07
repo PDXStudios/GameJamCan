@@ -29,5 +29,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+        
+        
     }
 }

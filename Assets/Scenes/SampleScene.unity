@@ -330,6 +330,17 @@ MonoBehaviour:
   fuelAmount: 100
   fuelGain: 1
   fuelLoss: 1
+  colliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   fuelbutton: 0
 --- !u!4 &153522828
 Transform:
@@ -512,6 +523,7 @@ GameObject:
   - component: {fileID: 288049177}
   - component: {fileID: 288049179}
   - component: {fileID: 288049180}
+  - component: {fileID: 288049181}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -612,6 +624,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &288049181
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288049175}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &306722460
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +682,7 @@ GameObject:
   - component: {fileID: 306722462}
   - component: {fileID: 306722464}
   - component: {fileID: 306722465}
+  - component: {fileID: 306722466}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -726,6 +784,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &306722466
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306722460}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1001 &382361889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1098,6 +1201,7 @@ GameObject:
   - component: {fileID: 547908766}
   - component: {fileID: 547908768}
   - component: {fileID: 547908769}
+  - component: {fileID: 547908770}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -1198,6 +1302,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &547908770
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547908764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1001 &563031184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1320,6 +1469,7 @@ GameObject:
   - component: {fileID: 624616856}
   - component: {fileID: 624616858}
   - component: {fileID: 624616859}
+  - component: {fileID: 624616860}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -1421,6 +1571,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &624616860
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624616854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &624634758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1629,7 @@ GameObject:
   - component: {fileID: 624634760}
   - component: {fileID: 624634762}
   - component: {fileID: 624634763}
+  - component: {fileID: 624634764}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -1535,6 +1731,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &624634764
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624634758}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!114 &727362256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1211128341195342134, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
@@ -1972,6 +2213,7 @@ GameObject:
   - component: {fileID: 1034082291}
   - component: {fileID: 1034082293}
   - component: {fileID: 1034082294}
+  - component: {fileID: 1034082295}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -2072,6 +2314,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1034082295
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034082289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &1054375823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2372,7 @@ GameObject:
   - component: {fileID: 1054375825}
   - component: {fileID: 1054375827}
   - component: {fileID: 1054375828}
+  - component: {fileID: 1054375829}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -2185,6 +2473,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1054375829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054375823}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &1222912889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,6 +2613,7 @@ GameObject:
   - component: {fileID: 1425750207}
   - component: {fileID: 1425750209}
   - component: {fileID: 1425750210}
+  - component: {fileID: 1425750211}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -2381,6 +2715,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1425750211
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425750205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &1556004670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3103,6 +3482,7 @@ GameObject:
   - component: {fileID: 1817724327}
   - component: {fileID: 1817724329}
   - component: {fileID: 1817724330}
+  - component: {fileID: 1817724331}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -3204,6 +3584,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1817724331
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817724325}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!224 &1842813255 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8647950477563083247, guid: 060858182c3bbeb41b37c3ed14e0787b, type: 3}
@@ -3467,6 +3892,7 @@ GameObject:
   - component: {fileID: 2075802344}
   - component: {fileID: 2075802346}
   - component: {fileID: 2075802347}
+  - component: {fileID: 2075802348}
   m_Layer: 5
   m_Name: ButtonBg
   m_TagString: DropArea
@@ -3568,6 +3994,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413992d08a7088641b9e599546ebc859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &2075802348
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075802342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 150, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &2093381415
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     [SerializeField] public float fuelAmount = 100.00f;
     [SerializeField] float fuelGain = 1.0f;
     [SerializeField] float fuelLoss = 1.0f;
+    [SerializeField] Collider2D[] colliders;
 
 
     float maxFloat = 100.0f;
@@ -96,7 +97,43 @@ public class GameController : MonoBehaviour
     {
         return fuelAmount;
     }
-    
+
+    private void OnEventTrigger(bool eventcheck)
+    {
+        if (eventcheck)
+        {
+            DisableRandomCollider();
+        }
+    }
+
+    //Collider Logic
+    private void DisableRandomCollider()
+    {
+        int activeColliders = 0;
+
+        foreach (var collider in colliders)
+        {
+            if (collider.enabled)
+            {
+                activeColliders++;
+            }
+        }
+
+        if (activeColliders <= 2)
+        {
+            return;
+        }
+
+        int randomIndex;
+        do
+        {
+            randomIndex = Random.Range(0, colliders.Length);
+        }
+        while (!colliders[randomIndex].enabled);
+
+        colliders[randomIndex].enabled = false;
+    }
+
     private void Debugging()
     {
 
