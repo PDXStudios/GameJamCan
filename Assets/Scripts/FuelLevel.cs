@@ -8,12 +8,6 @@ public class FuelLevel : MonoBehaviour
     [SerializeField] Image[] healthBars;
     [SerializeField] GameController gameController;
 
-
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         UpdateHealthBar();
@@ -21,12 +15,12 @@ public class FuelLevel : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-        float oxygenLevels = gameController.GetOxygenLevel();
+        float fuelLevel = gameController.GetFuelLevel();
 
         for (int i = 0; i < healthBars.Length; i++)
         {
             int threshold = 100 - (i + 1) * 10;
-            healthBars[i].gameObject.SetActive(oxygenLevels >= threshold);
+            healthBars[i].gameObject.SetActive(fuelLevel >= threshold);
         }
     }
 }

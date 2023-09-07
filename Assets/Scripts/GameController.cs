@@ -14,27 +14,43 @@ public class GameController : MonoBehaviour
     [SerializeField] float oxygenLossAmount =1.0f;
     [SerializeField] Image powerON;
     [SerializeField] Image oxygenON;
-    
-    
+    [SerializeField] public float fuelAmount = 100.00f;
+    [SerializeField] float fuelGain = 1.0f;
+    [SerializeField] float fuelLoss = 1.0f;
+
 
     float maxPower = 100.0f;
     float maxOxygen = 100.0f;
 
-    
+    bool fuelbutton = false;
 
 
     private void Update()
     {
         powerManager();
         OxygenManager();
+        FuelManager();
         //Debugging();
 
     }
 
+    private void FuelManager()
+    {
+        // pressing fuel button on ui
+        if (fuelbutton)
+        {
+            fuelAmount += fuelGain * Time.deltaTime;
+        }
+        else if (!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
+        {
+            fuelAmount -= fuelLoss * Time.deltaTime;
+        }
+
+    }
     private void powerManager()
     {
         
-        if (powerON.isActiveAndEnabled && powerAmount < maxPower)
+        if (powerON.isActiveAndEnabled && powerAmount < maxPower && fuelAmount > 0)
         {
             powerAmount += batteryChargeRate * Time.deltaTime;
         }
@@ -42,7 +58,7 @@ public class GameController : MonoBehaviour
         {
             if (powerAmount < - 10) 
             {
-            
+                powerAmount = -10;
             }
             powerAmount -= batteryDischargeRate * Time.deltaTime;
             
@@ -67,6 +83,10 @@ public class GameController : MonoBehaviour
     public float GetOxygenLevel()
     {
         return oxygenAmount;
+    }
+    public float GetFuelLevel()
+    {
+        return fuelAmount;
     }
     /*
     private void Debugging()

@@ -461,7 +461,6 @@ GameObject:
   - component: {fileID: 8647950477563083247}
   - component: {fileID: 3111267806461487372}
   - component: {fileID: 1211983016750750101}
-  - component: {fileID: 2548331219715196496}
   - component: {fileID: 6166976508739991620}
   m_Layer: 5
   m_Name: FuelStoragePanel
@@ -528,30 +527,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2548331219715196496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2918097581937270844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1453fdd6c595a944c804e92a1da5cba7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBars:
-  - {fileID: 4769507541889418500}
-  - {fileID: 3885956126209103589}
-  - {fileID: 6581332281262017542}
-  - {fileID: 7020984140361833980}
-  - {fileID: 2044117147008611922}
-  - {fileID: 8435656534292512141}
-  - {fileID: 1034762746873937910}
-  - {fileID: 4685998836706840499}
-  - {fileID: 873699698393809733}
-  - {fileID: 3004874921962352724}
-  gameController: {fileID: 0}
 --- !u!114 &6166976508739991620
 MonoBehaviour:
   m_ObjectHideFlags: 0
