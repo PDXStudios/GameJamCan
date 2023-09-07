@@ -17,7 +17,6 @@ public class GameController : MonoBehaviour
     
     
 
-    bool lights = false;
     float maxPower = 100.0f;
     float maxOxygen = 100.0f;
 
@@ -41,6 +40,10 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            if (powerAmount < - 10) 
+            {
+            
+            }
             powerAmount -= batteryDischargeRate * Time.deltaTime;
             
         }
