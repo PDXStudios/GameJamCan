@@ -7,9 +7,12 @@ public class DropSlot : MonoBehaviour, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
-        GameObject dropped = eventData.pointerDrag;
-        DragDrop dragDrop = dropped.GetComponent<DragDrop>();
-        dragDrop.parentAfterDrag = transform;
+        if (transform.childCount == 0)
+        {
+            GameObject dropped = eventData.pointerDrag;
+            DragDrop dragDrop = dropped.GetComponent<DragDrop>();
+            dragDrop.parentAfterDrag = transform;
+        }
     }
 
     // Start is called before the first frame update
