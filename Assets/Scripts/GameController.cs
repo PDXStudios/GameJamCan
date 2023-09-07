@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     float maxPower = 100.0f;
     float maxOxygen = 100.0f;
 
-    bool fuelbutton = false;
+    public bool fuelbutton = false;
 
 
     private void Update()
@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
         powerManager();
         OxygenManager();
         FuelManager();
-        //Debugging();
+        Debugging();
 
     }
 
@@ -41,12 +41,26 @@ public class GameController : MonoBehaviour
         {
             fuelAmount += fuelGain * Time.deltaTime;
         }
-        else if (!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
+        else (!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
         {
             fuelAmount -= fuelLoss * Time.deltaTime;
         }
+        
 
     }
+
+    public void fuelBoolOn(bool fuelbutton)
+    {
+        fuelbutton = true;
+        Debug.Log("function called");
+        Debug.Log(fuelbutton);
+    }
+
+    public void fuelBoolOff(bool fuelbutton)
+    {
+        fuelbutton = false;
+        Debug.Log(fuelbutton);
+    }    
     private void powerManager()
     {
         
@@ -88,14 +102,12 @@ public class GameController : MonoBehaviour
     {
         return fuelAmount;
     }
-    /*
+    
     private void Debugging()
     {
 
-        Debug.Log("Power Level: " + powerAmount);
-        
-        Debug.Log("Oxygen Levels: " + oxygenAmount);
+       // Debug.Log(fuelbutton);
     }
-    */
+    
 }
 
