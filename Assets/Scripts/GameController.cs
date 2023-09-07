@@ -19,8 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float fuelLoss = 1.0f;
 
 
-    float maxPower = 100.0f;
-    float maxOxygen = 100.0f;
+    float maxFloat = 100.0f;
 
     public bool fuelbutton = false;
 
@@ -37,7 +36,7 @@ public class GameController : MonoBehaviour
     private void FuelManager()
     {
         // pressing fuel button on ui
-        if (fuelbutton)
+        if (fuelbutton && fuelAmount < maxFloat)
         {
             fuelAmount += fuelGain * Time.deltaTime;
         }
@@ -59,7 +58,7 @@ public class GameController : MonoBehaviour
     private void powerManager()
     {
         
-        if (powerON.isActiveAndEnabled && powerAmount < maxPower && fuelAmount > 0)
+        if (powerON.isActiveAndEnabled && powerAmount < maxFloat && fuelAmount > 0)
         {
             powerAmount += batteryChargeRate * Time.deltaTime;
         }
@@ -75,7 +74,7 @@ public class GameController : MonoBehaviour
     }
     private void OxygenManager()
     {
-        if (oxygenON.isActiveAndEnabled && powerAmount >= 0 && oxygenAmount < maxOxygen)
+        if (oxygenON.isActiveAndEnabled && powerAmount >= 0 && oxygenAmount < maxFloat)
         {
             oxygenAmount += oxygenGainAmount * Time.deltaTime;
         }
