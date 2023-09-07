@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     float maxFloat = 100.0f;
 
     public bool fuelbutton = false;
+    float randomEventTimer = 0;
 
 
     private void Update()
@@ -33,7 +34,29 @@ public class GameController : MonoBehaviour
         Debugging();
 
     }
-
+    private void FixedUpdate()
+    {
+        ranndomEvent();
+    }
+    private bool ranndomEvent()
+    {
+        int eventhit = 2;
+        int randomNumber = Random.Range(1, 3);
+        randomEventTimer += Time.deltaTime;
+        if (randomEventTimer > 6 ) 
+        {
+            Debug.Log(randomNumber);
+            Debug.Log("eventChance");
+            if (randomNumber == eventhit)
+            {
+                Debug.Log("randomEvent");
+                randomEventTimer = 0;
+                return true;
+            }
+            randomEventTimer = 0;
+        }
+        return false;
+    }
     private void FuelManager()
     {
         // pressing fuel button on ui
