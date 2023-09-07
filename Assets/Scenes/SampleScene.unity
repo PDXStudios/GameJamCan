@@ -1206,6 +1206,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 624634759}
     m_Modifications:
+    - target: {fileID: 1211128341195342134, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433817197171216982, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5683997168926156296, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
       propertyPath: gameController
       value: 
