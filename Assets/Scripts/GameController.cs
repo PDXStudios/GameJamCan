@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
     {
         powerManager();
         OxygenManager();
-        Debugging();
+        //Debugging();
 
     }
 
@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
     {
         return oxygenAmount;
     }
+    /*
     private void Debugging()
     {
 
@@ -72,5 +73,6 @@ public class GameController : MonoBehaviour
         
         Debug.Log("Oxygen Levels: " + oxygenAmount);
     }
+    */
 }
 

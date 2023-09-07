@@ -170,7 +170,7 @@ MonoBehaviour:
   On: {fileID: 9017567733818226227}
   Off: {fileID: 7158823380029638350}
   Image: {fileID: 1378481840561374055}
-  PowerController: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!114 &3673846015205447103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0152ae09cd9354484e098c6058c8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentAfterDrag: {fileID: 0}
+  image: {fileID: 1378481840561374055}
 --- !u!1 &8545490315201879585
 GameObject:
   m_ObjectHideFlags: 0

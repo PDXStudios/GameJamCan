@@ -1,52 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
-{ 
+public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+{
 
-    Vector3 offset;
+    [HideInInspector] public Transform parentAfterDrag;
+    public Image image;
     CanvasGroup canvasGroup;
-    string destinationTag = "DropArea";
-
-    void Awake()
+    
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        if (gameObject.GetComponent<CanvasGroup>() == null)
-            gameObject.GetComponent<CanvasGroup>();
-        canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
+        transform.SetAsLastSibling();
+        image.raycastTarget = false;
     }
-
 
     public void OnDrag(PointerEventData eventData)
     {
-
-        transform.position = Input.mousePosition + offset;
-
+        
+        transform.position = Input.mousePosition;
     }
-    
-    
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnEndDrag(PointerEventData eventData)
     {
-
-        offset = transform.position - Input.mousePosition;
-        canvasGroup.alpha = 0.5f;
-        canvasGroup.blocksRaycasts = false;
-
+        transform.SetParent(parentAfterDrag);
+        image.raycastTarget = true;
     }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-
-        RaycastResult raycastResult = eventData.pointerCurrentRaycast;
-        if(raycastResult.gameObject?.tag == destinationTag)
-        {
-            transform.position = raycastResult.gameObject.transform.position;
-        }
-        canvasGroup.alpha = 1;
-        canvasGroup.blocksRaycasts = true;
-    }
-
-
 }
