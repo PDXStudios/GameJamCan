@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
     {
         ranndomEvent();
     }
-    private bool ranndomEvent()
+    private void ranndomEvent()
     {
         int eventhit = 2;
         int randomNumber = Random.Range(1, 3);
@@ -51,12 +51,43 @@ public class GameController : MonoBehaviour
             {
                 Debug.Log("randomEvent");
                 randomEventTimer = 0;
-                return true;
+                DisableRandomCollider();
             }
             randomEventTimer = 0;
         }
-        return false;
     }
+
+    
+
+    //Collider Logic
+    private void DisableRandomCollider()
+    {
+        int activeColliders = 0;
+
+        foreach (var collider in colliders)
+        {
+            if (collider.enabled)
+            {
+                activeColliders++;
+            }
+        }
+
+        if (activeColliders <= 2)
+        {
+            return;
+        }
+
+        int randomIndex;
+        do
+        {
+            randomIndex = Random.Range(0, colliders.Length);
+        }
+        while (!colliders[randomIndex].enabled);
+
+        colliders[randomIndex].enabled = false;
+        Debug.Log(randomIndex);
+    }
+
     private void FuelManager()
     {
         // pressing fuel button on ui
@@ -121,41 +152,7 @@ public class GameController : MonoBehaviour
         return fuelAmount;
     }
 
-    private void OnEventTrigger(bool eventcheck)
-    {
-        if (eventcheck)
-        {
-            DisableRandomCollider();
-        }
-    }
-
-    //Collider Logic
-    private void DisableRandomCollider()
-    {
-        int activeColliders = 0;
-
-        foreach (var collider in colliders)
-        {
-            if (collider.enabled)
-            {
-                activeColliders++;
-            }
-        }
-
-        if (activeColliders <= 2)
-        {
-            return;
-        }
-
-        int randomIndex;
-        do
-        {
-            randomIndex = Random.Range(0, colliders.Length);
-        }
-        while (!colliders[randomIndex].enabled);
-
-        colliders[randomIndex].enabled = false;
-    }
+    
 
     private void Debugging()
     {
