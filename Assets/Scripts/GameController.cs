@@ -41,25 +41,20 @@ public class GameController : MonoBehaviour
         {
             fuelAmount += fuelGain * Time.deltaTime;
         }
-        else (!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
+        else if(!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
         {
             fuelAmount -= fuelLoss * Time.deltaTime;
         }
-        
-
     }
 
-    public void fuelBoolOn(bool fuelbutton)
+    public void fuelBoolOn()
     {
         fuelbutton = true;
-        Debug.Log("function called");
-        Debug.Log(fuelbutton);
     }
 
-    public void fuelBoolOff(bool fuelbutton)
+    public void fuelBoolOff()
     {
         fuelbutton = false;
-        Debug.Log(fuelbutton);
     }    
     private void powerManager()
     {
@@ -106,7 +101,7 @@ public class GameController : MonoBehaviour
     private void Debugging()
     {
 
-       // Debug.Log(fuelbutton);
+       //Debug.Log(fuelbutton);
     }
     
 }
