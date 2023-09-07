@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 3111267806461487372}
   - component: {fileID: 1211983016750750101}
   - component: {fileID: 6166976508739991620}
+  - component: {fileID: 3791579153200854333}
   m_Layer: 5
   m_Name: FuelStoragePanel
   m_TagString: Untagged
@@ -541,6 +542,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentAfterDrag: {fileID: 0}
   image: {fileID: 1211983016750750101}
+--- !u!114 &3791579153200854333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2918097581937270844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ba423585c4f4e4c8c3ccf3a9eff38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBars:
+  - {fileID: 4769507541889418500}
+  - {fileID: 3885956126209103589}
+  - {fileID: 6581332281262017542}
+  - {fileID: 7020984140361833980}
+  - {fileID: 2044117147008611922}
+  - {fileID: 8435656534292512141}
+  - {fileID: 1034762746873937910}
+  - {fileID: 4685998836706840499}
+  - {fileID: 873699698393809733}
+  - {fileID: 3004874921962352724}
+  gameController: {fileID: 0}
 --- !u!1 &4661620127665603189
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
