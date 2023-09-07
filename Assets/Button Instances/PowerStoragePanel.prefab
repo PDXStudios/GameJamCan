@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 3111267806461487372}
   - component: {fileID: 1211983016750750101}
   - component: {fileID: 2548331219715196496}
-  - component: {fileID: 4559664310404802628}
+  - component: {fileID: 6166976508739991620}
   m_Layer: 5
   m_Name: PowerStoragePanel
   m_TagString: Untagged
@@ -552,7 +552,7 @@ MonoBehaviour:
   - {fileID: 873699698393809733}
   - {fileID: 3004874921962352724}
   gameController: {fileID: 0}
---- !u!114 &4559664310404802628
+--- !u!114 &6166976508739991620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

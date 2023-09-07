@@ -22,13 +22,12 @@ public class PowerBarLevels : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-        float oxygenLevels = gameController.GetPowerLevel();
+        float powerLevels = gameController.GetPowerLevel();
 
-        for (int i = 0; i < healthBars.Length; i++)
+        for(int i = 0; i < healthBars.Length; i++)
         {
             int threshold = 100 - (i + 1) * 10;
-            healthBars[i].gameObject.SetActive(oxygenLevels >= threshold);
+            healthBars[i].gameObject.SetActive(powerLevels >= threshold);
         }
     }
-    
 }
