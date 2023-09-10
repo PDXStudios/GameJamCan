@@ -331,16 +331,16 @@ MonoBehaviour:
   fuelGain: 1
   fuelLoss: 1
   colliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2075802348}
+  - {fileID: 624616860}
+  - {fileID: 1054375829}
+  - {fileID: 547908770}
+  - {fileID: 1034082295}
+  - {fileID: 288049181}
+  - {fileID: 1817724331}
+  - {fileID: 624634764}
+  - {fileID: 1425750211}
+  - {fileID: 306722466}
   fuelbutton: 0
 --- !u!4 &153522828
 Transform:
