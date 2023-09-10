@@ -2,14 +2,18 @@ using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ClickToStart : MonoBehaviour
 {
     [SerializeField] GameController gameController;
     [SerializeField] GameObject spaceObject;
-    // Start is called before the first frame update
+    [SerializeField] Button clickStartButton;
     Vector3 endpoint = new Vector3 (0,1080,0);
     bool atEnd = true;
+
+
     public void ClickStart()
     {
         atEnd = false;
@@ -27,6 +31,8 @@ public class ClickToStart : MonoBehaviour
             }
             transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.5f * Time.deltaTime);
             spaceObject.transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.005f * Time.deltaTime);
+            transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.25f * Time.deltaTime);
+            clickStartButton.gameObject.SetActive(false);
         }
         Debug.Log(transform.position);
     }
