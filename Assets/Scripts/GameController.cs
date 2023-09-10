@@ -24,14 +24,18 @@ public class GameController : MonoBehaviour
 
     public bool fuelbutton = false;
     float randomEventTimer = 0;
+    bool gamePlaying = false;
 
 
     private void Update()
     {
-        powerManager();
-        OxygenManager();
-        FuelManager();
-        Debugging();
+        if (gamePlaying == true)
+        {
+            powerManager();
+            OxygenManager();
+            FuelManager();
+            Debugging();
+        }
 
     }
     private void FixedUpdate()
@@ -152,7 +156,21 @@ public class GameController : MonoBehaviour
         return fuelAmount;
     }
 
-    
+
+    public void setPlayState(bool State)
+    {
+        if (State == true)
+        {
+            gamePlaying = true;
+        }
+        else
+        {
+            gamePlaying = false;
+        }
+    }
+
+
+
 
     private void Debugging()
     {
