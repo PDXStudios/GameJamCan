@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class ClickToStart : MonoBehaviour
 {
     [SerializeField] GameController gameController;
+    [SerializeField] GameObject spaceObject;
     // Start is called before the first frame update
     Vector3 endpoint = new Vector3 (0,1080,0);
     bool atEnd = true;
@@ -24,6 +26,7 @@ public class ClickToStart : MonoBehaviour
                 return;
             }
             transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.5f * Time.deltaTime);
+            spaceObject.transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.005f * Time.deltaTime);
         }
         Debug.Log(transform.position);
     }
