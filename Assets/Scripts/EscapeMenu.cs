@@ -14,26 +14,27 @@ public class EscapeMenu : MonoBehaviour
 
     public void Resume()
     {
-        if (!mainUi.activeSelf)
+        if (escapeMenuUi.activeSelf)
         {
-            mainUi.SetActive(true);
             escapeMenuUi.SetActive(false);
+            Time.timeScale = 1.0f;
         }
     }
     public void escapeKey()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (mainUi.activeSelf)
+            if (!escapeMenuUi.activeSelf)
             {
                 
-                mainUi.SetActive(false);
                 escapeMenuUi.SetActive(true);
+                Time.timeScale = 0.0f;
             }
             else
             {
-                mainUi.SetActive(true);
+
                 escapeMenuUi.SetActive(false);
+                Time.timeScale = 1.0f;
             }
         }
     }
