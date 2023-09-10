@@ -21,7 +21,6 @@ public class ClickToStart : MonoBehaviour
             if (transform.position.y >= 1080)
             {
                 atEnd = true;
-                transform.position = endpoint;
                 return;
             }
             transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.5f * Time.deltaTime);

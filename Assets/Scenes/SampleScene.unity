@@ -3394,7 +3394,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1052392440}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2011008822}
+        m_TargetAssemblyTypeName: ClickToStart, Assembly-CSharp
+        m_MethodName: ClickStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1052392440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5654,6 +5666,7 @@ GameObject:
   - component: {fileID: 2011008819}
   - component: {fileID: 2011008821}
   - component: {fileID: 2011008820}
+  - component: {fileID: 2011008822}
   m_Layer: 5
   m_Name: MainShipBG
   m_TagString: Untagged
@@ -5720,6 +5733,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011008818}
   m_CullTransparentMesh: 1
+--- !u!114 &2011008822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011008818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372635727fadc3d4db36663b2ea2b8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 153522827}
 --- !u!1 &2037829305
 GameObject:
   m_ObjectHideFlags: 0
