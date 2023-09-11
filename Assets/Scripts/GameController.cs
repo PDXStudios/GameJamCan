@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Image fuelLight;
     float randomEventTimer = 0;
     bool gamePlaying = false;
+    [SerializeField] int randomEventInterval = 30; 
 
     [SerializeField] float currentTempature;
     [SerializeField] Image tooltip;
@@ -59,7 +60,7 @@ public class GameController : MonoBehaviour
         int eventhit = 2;
         int randomNumber = Random.Range(1, 3);
         randomEventTimer += Time.deltaTime;
-        if (randomEventTimer > 60 ) 
+        if (randomEventTimer > randomEventInterval ) 
         {
             if (randomNumber == eventhit)
             {
@@ -132,7 +133,7 @@ public class GameController : MonoBehaviour
     private void FuelManager()
     {
         // pressing fuel button on ui
-        if (fuelbutton && fuelAmount < maxFloat)
+        if (fuelbutton && fuelAmount < maxFloat && fuelLight.isActiveAndEnabled)
         {
             fuelAmount += fuelGain * Time.deltaTime;
         }
