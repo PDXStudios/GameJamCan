@@ -27,6 +27,7 @@ public class ClickToStart : MonoBehaviour
             if (transform.position.y >= 1080)
             {
                 atEnd = true;
+                transform.position = new Vector3(960.00f, 1080.0f, 0f);
                 return;
             }
             transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.35f * Time.deltaTime);
@@ -34,6 +35,5 @@ public class ClickToStart : MonoBehaviour
             // transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.25f * Time.deltaTime);
             clickStartButton.gameObject.SetActive(false);
         }
-        Debug.Log(transform.position);
     }
 }
