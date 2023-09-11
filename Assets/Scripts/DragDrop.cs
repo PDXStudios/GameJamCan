@@ -12,12 +12,28 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     [SerializeField] Image switchOFF;
     CanvasGroup canvasGroup;
     private bool isPowered;
-    
+    Rigidbody2D _rb;
 
-    public void IsCurrentlyPowered()
+
+    void Start()
     {
-        gameObject.GetComponent<BoxCollider2D>();
-        Debug.Log(gameObject.GetComponent<BoxCollider2D>());
+        _rb = gameObject.GetComponent<Rigidbody2D>();
+    }    
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        switchOFF.gameObject.SetActive(true);
+        isPowered = true;
+        Debug.Log(isPowered);
+       
+    }
+
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+
+        switchOFF.gameObject.SetActive(false);
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -26,7 +42,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
-        switchOFF.gameObject.SetActive(isPowered);
+        //switchOFF.gameObject.SetActive(isPowered);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -39,7 +55,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
-        switchOFF.gameObject.SetActive(isPowered);
+        //switchOFF.gameObject.SetActive(isPowered);
         
         
     }
