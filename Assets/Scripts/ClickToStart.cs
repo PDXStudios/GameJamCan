@@ -29,9 +29,9 @@ public class ClickToStart : MonoBehaviour
                 atEnd = true;
                 return;
             }
-            transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.5f * Time.deltaTime);
-            spaceObject.transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.005f * Time.deltaTime);
-            transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.25f * Time.deltaTime);
+            transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.35f * Time.deltaTime);
+            spaceObject.transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.007f * Time.deltaTime);
+            // transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.25f * Time.deltaTime);
             clickStartButton.gameObject.SetActive(false);
         }
         Debug.Log(transform.position);

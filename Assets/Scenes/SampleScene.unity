@@ -380,6 +380,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120755772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5667202373673993990, guid: a7236ba68aacbe84a8333074205c3796, type: 3}
+  m_PrefabInstance: {fileID: 977383781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126146477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1153,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6166976508739991620, guid: 060858182c3bbeb41b37c3ed14e0787b, type: 3}
+      propertyPath: switchOFF
+      value: 
+      objectReference: {fileID: 382361890}
     - target: {fileID: 8416192932548858158, guid: 060858182c3bbeb41b37c3ed14e0787b, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1231,6 +1246,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 060858182c3bbeb41b37c3ed14e0787b, type: 3}
+--- !u!114 &382361890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4234579768315997221, guid: 060858182c3bbeb41b37c3ed14e0787b, type: 3}
+  m_PrefabInstance: {fileID: 382361889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &417993619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +1898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerButtonPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6068070444444428867, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
+      propertyPath: switchOFF
+      value: 
+      objectReference: {fileID: 563031185}
     - target: {fileID: 6485991409310927343, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1957,6 +1987,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
+--- !u!114 &563031185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5583232676554949423, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
+  m_PrefabInstance: {fileID: 563031184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &590853601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2506,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1425750206}
     m_Modifications:
+    - target: {fileID: 995037926857338054, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
+      propertyPath: switchOFF
+      value: 
+      objectReference: {fileID: 1077335923}
     - target: {fileID: 6275677680298610138, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
       propertyPath: gameController
       value: 
@@ -2472,6 +2517,10 @@ PrefabInstance:
     - target: {fileID: 6819051943612313697, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
       propertyPath: m_Name
       value: OxygenButtonPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158823380029638350, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7707187342277158280, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
       propertyPath: m_Pivot.x
@@ -2556,6 +2605,10 @@ PrefabInstance:
     - target: {fileID: 8545490315201879585, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017567733818226227, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2792,6 +2845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8050102361233029394, guid: a7236ba68aacbe84a8333074205c3796, type: 3}
+      propertyPath: switchOFF
+      value: 
+      objectReference: {fileID: 120755772}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3688,6 +3745,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 224702453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1077335923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4796271856390924656, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
+  m_PrefabInstance: {fileID: 913267900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161451159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3858,7 +3926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1235558837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4177,6 +4245,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505147863}
   m_CullTransparentMesh: 1
+--- !u!114 &1555251081 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4234579768315997221, guid: e49f61ce72549dc4eb4a94f63a65917b, type: 3}
+  m_PrefabInstance: {fileID: 1998403138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1556004670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5570,6 +5649,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 153522827}
+    - target: {fileID: 6166976508739991620, guid: e49f61ce72549dc4eb4a94f63a65917b, type: 3}
+      propertyPath: switchOFF
+      value: 
+      objectReference: {fileID: 1555251081}
     - target: {fileID: 8647950477563083247, guid: e49f61ce72549dc4eb4a94f63a65917b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5747,6 +5830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 153522827}
   spaceObject: {fileID: 224702452}
+  clickStartButton: {fileID: 1052392439}
 --- !u!1 &2037829305
 GameObject:
   m_ObjectHideFlags: 0
