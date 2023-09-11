@@ -19,14 +19,18 @@ public class GameController : MonoBehaviour
     [SerializeField] float fuelLoss = 1.0f;
     [SerializeField] Collider2D[] colliders;
 
-
     float maxFloat = 100.0f;
-
     public bool fuelbutton = false;
     float randomEventTimer = 0;
     bool gamePlaying = false;
 
+    float currentTempature;
+    int setTemp = 70;
 
+    private void Start()
+    {
+        currentTempature = 70.0f;
+    }
     private void Update()
     {
         if (gamePlaying == true)
@@ -34,6 +38,8 @@ public class GameController : MonoBehaviour
             powerManager();
             OxygenManager();
             FuelManager();
+            TempManager();
+            Debug.Log(currentTempature);
             Debugging();
         }
 
@@ -42,6 +48,7 @@ public class GameController : MonoBehaviour
     {
         ranndomEvent();
     }
+
     private void ranndomEvent()
     {
         int eventhit = 2;
@@ -60,8 +67,16 @@ public class GameController : MonoBehaviour
             randomEventTimer = 0;
         }
     }
-
-    
+    private void TempManager()
+    {
+        currentTempature -= 1.0f * Time.deltaTime;
+    }
+    public int getCurrentTemp()
+    {
+        // returns current temp
+        int tempint = (int)Mathf.Round(currentTempature);
+        return tempint;
+    }
 
     //Collider Logic
     private void DisableRandomCollider()

@@ -13,13 +13,13 @@ public class TempButton : MonoBehaviour
     [SerializeField] Image heating;
     [SerializeField] Image cooling;
 
+    [SerializeField] GameController gameController;
     int tempCur;
     int tempSet;
 
 
     private void Start()
     {
-        tempCur = 70;
         tempSet = 70;
     }
 
@@ -27,6 +27,7 @@ public class TempButton : MonoBehaviour
     {
         currentTemp.text = tempCur.ToString();
         setTemp.text = tempSet.ToString();
+        tempCur = gameController.getCurrentTemp();
 
         if (tempCur == tempSet)
         {
