@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 3673846015205447103}
   - component: {fileID: 995037926857338054}
   - component: {fileID: -3216288033465292203}
+  - component: {fileID: 4452878889926192195}
   m_Layer: 5
   m_Name: OxygenButtonPanel
   m_TagString: Untagged
@@ -318,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentAfterDrag: {fileID: 0}
   image: {fileID: 1378481840561374055}
-  switchOFF: {fileID: 0}
+  switchOFF: {fileID: 4796271856390924656}
 --- !u!61 &-3216288033465292203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -364,6 +365,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 250, y: 500}
   m_EdgeRadius: 0
+--- !u!50 &4452878889926192195
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819051943612313697}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &8545490315201879585
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

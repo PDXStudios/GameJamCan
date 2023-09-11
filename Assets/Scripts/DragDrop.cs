@@ -20,21 +20,25 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         _rb = gameObject.GetComponent<Rigidbody2D>();
     }    
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "ButtonBG")
+        if (collision.gameObject.name == "ButtonBg")
         {
-            Debug.Log("BANG");
+
+            switchOFF.gameObject.SetActive(true);
             
         }
-
-        
-
         /*
-        switchOFF.gameObject.SetActive(true);
-        isPowered = true;
-        Debug.Log(isPowered);
-       */
+        else
+        {
+            switchOFF.gameObject.SetActive(false);
+        }
+        */
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        switchOFF.gameObject.SetActive(false);
     }
 
 
@@ -44,21 +48,24 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
-        //switchOFF.gameObject.SetActive(isPowered);
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         
         transform.position = Input.mousePosition;
+        
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
-        //switchOFF.gameObject.SetActive(isPowered);
-        
-        
+        //switchOFF.gameObject.SetActive(true);
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+
     }
 }
