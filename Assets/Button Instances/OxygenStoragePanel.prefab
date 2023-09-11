@@ -492,6 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentAfterDrag: {fileID: 0}
   image: {fileID: 7648096699979035762}
+  switchOFF: {fileID: 0}
 --- !u!61 &-7519338036690453729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 250, y: 500}
   m_EdgeRadius: 0
 --- !u!1 &5215404155997497278
 GameObject:

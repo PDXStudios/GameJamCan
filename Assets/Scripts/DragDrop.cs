@@ -22,19 +22,21 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.name == "ButtonBG")
+        {
+            Debug.Log("BANG");
+            
+        }
+
+        
+
+        /*
         switchOFF.gameObject.SetActive(true);
         isPowered = true;
         Debug.Log(isPowered);
-       
+       */
     }
 
-
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-
-        switchOFF.gameObject.SetActive(false);
-
-    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
