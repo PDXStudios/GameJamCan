@@ -4836,10 +4836,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FuelButtonPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6068070444444428867, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
-      propertyPath: switchOFF
-      value: 
-      objectReference: {fileID: 1495492084}
     - target: {fileID: 6485991409310927343, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
