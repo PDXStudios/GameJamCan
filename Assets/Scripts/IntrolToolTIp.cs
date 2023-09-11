@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class IntrolToolTIp : MonoBehaviour
 {
-
     [SerializeField] Image toolTipPanel;
     [SerializeField] Image tool1;
     [SerializeField] Image tool2;
@@ -21,7 +20,6 @@ public class IntrolToolTIp : MonoBehaviour
     void Start()
     {
         UpdatePage();
-        Debug.Log(currentPage);
     }
 
     public void NextImage()
@@ -30,7 +28,6 @@ public class IntrolToolTIp : MonoBehaviour
         {
             currentPage++;
             UpdatePage();
-            Debug.Log(currentPage);
         }
     }
 
@@ -40,7 +37,6 @@ public class IntrolToolTIp : MonoBehaviour
         {
             currentPage--;
             UpdatePage();
-            Debug.Log(currentPage);
         }
     }
 
@@ -58,4 +54,5 @@ public class IntrolToolTIp : MonoBehaviour
     {
         toolTipPanel.gameObject.SetActive(false);
     }
+
 }

@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
     bool gamePlaying = false;
 
     [SerializeField] float currentTempature;
+    [SerializeField] Image tooltip;
     int WantedTemp = 70;
 
     private void Start()
@@ -34,7 +35,7 @@ public class GameController : MonoBehaviour
     }
     private void Update()
     {
-        if (gamePlaying == true)
+        if (gamePlaying == true && !tooltip.isActiveAndEnabled)
         {
             powerManager();
             OxygenManager();
