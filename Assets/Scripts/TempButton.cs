@@ -15,8 +15,7 @@ public class TempButton : MonoBehaviour
 
     [SerializeField] GameController gameController;
     int tempCur;
-    int tempSet;
-
+    public int tempSet;
 
     private void Start()
     {
@@ -32,8 +31,9 @@ public class TempButton : MonoBehaviour
         if (tempCur == tempSet)
         {
             cooling.gameObject.SetActive(false);
-            heating.gameObject.SetActive(false); ;
+            heating.gameObject.SetActive(false);
         }
+        gameController.SetTemp(tempSet);
 
     }
 

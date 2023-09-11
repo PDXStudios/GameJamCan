@@ -498,6 +498,7 @@ MonoBehaviour:
   oxygenLossAmount: 1
   powerON: {fileID: 727362256}
   oxygenON: {fileID: 42039121}
+  temptureON: {fileID: 1212156160}
   fuelAmount: 100
   fuelGain: 1
   fuelLoss: 1
@@ -513,6 +514,7 @@ MonoBehaviour:
   - {fileID: 1425750211}
   - {fileID: 306722466}
   fuelbutton: 0
+  currentTempature: 0
 --- !u!4 &153522828
 Transform:
   m_ObjectHideFlags: 0
@@ -1122,17 +1124,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 150, y: 300}
   m_EdgeRadius: 0
---- !u!114 &377435441 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5787429481017212888, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
-  m_PrefabInstance: {fileID: 1212156152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &382361889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2866,7 +2857,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2081362540}
+      - m_Target: {fileID: 2081362541}
         m_TargetAssemblyTypeName: TempButton, Assembly-CSharp
         m_MethodName: SetTemp
         m_Mode: 1
@@ -3714,17 +3705,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 224702453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1125377519 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 368534500546171684, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
-  m_PrefabInstance: {fileID: 1212156152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1161451159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,6 +3788,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 547908765}
     m_Modifications:
+    - target: {fileID: 47816894973290942, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 153522827}
+    - target: {fileID: 80286679358079134, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80286679358079134, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 80286679358079134, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2081362532}
+    - target: {fileID: 80286679358079134, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2081362532}
+    - target: {fileID: 80286679358079134, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 80286679358079134, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5136818727211229598, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
       propertyPath: m_Transition
       value: 0
@@ -3916,9 +3924,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5751646539024678230, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2081362540}
     - targetCorrespondingSourceObject: {fileID: 2930796701184443462, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1212156162}
@@ -4037,7 +4042,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2081362540}
+      - m_Target: {fileID: 2081362541}
         m_TargetAssemblyTypeName: TempButton, Assembly-CSharp
         m_MethodName: DecreaseTemp
         m_Mode: 1
@@ -4093,7 +4098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2081362540}
+      - m_Target: {fileID: 2081362541}
         m_TargetAssemblyTypeName: TempButton, Assembly-CSharp
         m_MethodName: IncreaseTemp
         m_Mode: 1
@@ -4279,17 +4284,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235558836}
   m_CullTransparentMesh: 1
---- !u!114 &1337693121 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9088494605584890721, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
-  m_PrefabInstance: {fileID: 1212156152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1387718219 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7707187342277158280, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
@@ -4455,17 +4449,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 150, y: 300}
   m_EdgeRadius: 0
---- !u!114 &1426796281 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 157710990234876256, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
-  m_PrefabInstance: {fileID: 1212156152}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1505147863
 GameObject:
   m_ObjectHideFlags: 0
@@ -6532,11 +6515,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5751646539024678230, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
   m_PrefabInstance: {fileID: 1212156152}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2081362540
+--- !u!114 &2081362541 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 47816894973290942, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+  m_PrefabInstance: {fileID: 1212156152}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081362532}
   m_Enabled: 1
@@ -6544,12 +6526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8c499cf31d94e0459eeae665a3e233a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upTemp: {fileID: 1212156159}
-  downTemp: {fileID: 1212156157}
-  currentTemp: {fileID: 377435441}
-  setTemp: {fileID: 1426796281}
-  heating: {fileID: 1125377519}
-  cooling: {fileID: 1337693121}
 --- !u!1 &2093381415
 GameObject:
   m_ObjectHideFlags: 0

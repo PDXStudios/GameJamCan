@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float oxygenLossAmount =1.0f;
     [SerializeField] Image powerON;
     [SerializeField] Image oxygenON;
+    [SerializeField] Image temptureON;
     [SerializeField] public float fuelAmount = 100.00f;
     [SerializeField] float fuelGain = 1.0f;
     [SerializeField] float fuelLoss = 1.0f;
@@ -24,8 +25,8 @@ public class GameController : MonoBehaviour
     float randomEventTimer = 0;
     bool gamePlaying = false;
 
-    float currentTempature;
-    int setTemp = 70;
+    [SerializeField] float currentTempature;
+    int WantedTemp = 70;
 
     private void Start()
     {
@@ -39,7 +40,6 @@ public class GameController : MonoBehaviour
             OxygenManager();
             FuelManager();
             TempManager();
-            Debug.Log(currentTempature);
             Debugging();
         }
 
@@ -69,7 +69,22 @@ public class GameController : MonoBehaviour
     }
     private void TempManager()
     {
-        currentTempature -= 1.0f * Time.deltaTime;
+        if (temptureON.isActiveAndEnabled)
+        {
+            if (currentTempature <= WantedTemp)
+            {
+                currentTempature += 1.0f * Time.deltaTime;
+            }
+            else if (currentTempature >= WantedTemp)
+            {
+                currentTempature -= 1.0f * Time.deltaTime;
+            }
+        }
+        else
+        {
+
+            currentTempature -= 1.0f * Time.deltaTime;
+        }
     }
     public int getCurrentTemp()
     {
@@ -78,6 +93,10 @@ public class GameController : MonoBehaviour
         return tempint;
     }
 
+    public void SetTemp(int newTemp)
+    {
+        WantedTemp = newTemp;
+    }
     //Collider Logic
     private void DisableRandomCollider()
     {
