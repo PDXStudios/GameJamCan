@@ -5747,6 +5747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 153522827}
   spaceObject: {fileID: 224702452}
+  clickStartButton: {fileID: 1052392439}
 --- !u!1 &2037829305
 GameObject:
   m_ObjectHideFlags: 0
