@@ -3714,6 +3714,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 224702453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125377519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 368534500546171684, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+  m_PrefabInstance: {fileID: 1212156152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1161451159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4268,6 +4279,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235558836}
   m_CullTransparentMesh: 1
+--- !u!114 &1337693121 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9088494605584890721, guid: 0c65516f2be504a40bad667b46f9cb03, type: 3}
+  m_PrefabInstance: {fileID: 1212156152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1387718219 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7707187342277158280, guid: 99ad7610d02a9214cb6512744b889064, type: 3}
@@ -4442,17 +4464,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1495492084 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6518429377469449447, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
-  m_PrefabInstance: {fileID: 1576773642}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1505147863
@@ -6537,6 +6548,8 @@ MonoBehaviour:
   downTemp: {fileID: 1212156157}
   currentTemp: {fileID: 377435441}
   setTemp: {fileID: 1426796281}
+  heating: {fileID: 1125377519}
+  cooling: {fileID: 1337693121}
 --- !u!1 &2093381415
 GameObject:
   m_ObjectHideFlags: 0

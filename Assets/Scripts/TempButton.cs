@@ -10,6 +10,8 @@ public class TempButton : MonoBehaviour
     [SerializeField] Image downTemp;
     [SerializeField] TextMeshProUGUI currentTemp;
     [SerializeField] TextMeshProUGUI setTemp;
+    [SerializeField] Image heating;
+    [SerializeField] Image cooling;
 
     int tempCur;
     int tempSet;
@@ -25,6 +27,12 @@ public class TempButton : MonoBehaviour
     {
         currentTemp.text = tempCur.ToString();
         setTemp.text = tempSet.ToString();
+
+        if (tempCur == tempSet)
+        {
+            cooling.gameObject.SetActive(false);
+            heating.gameObject.SetActive(false); ;
+        }
 
     }
 
@@ -48,5 +56,18 @@ public class TempButton : MonoBehaviour
     {
         currentTemp.gameObject.SetActive(true);
         setTemp.gameObject.SetActive(false);
+        if (tempCur > tempSet)
+        {
+            cooling.gameObject.SetActive(true);
+            heating.gameObject.SetActive(false);
+        }
+
+        if (tempCur < tempSet)
+        {
+            cooling.gameObject.SetActive(false);
+            heating.gameObject.SetActive(true);
+        }
+
+        
     }
 }
