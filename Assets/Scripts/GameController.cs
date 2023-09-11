@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
 
     float maxFloat = 100.0f;
     public bool fuelbutton = false;
+    [SerializeField] Image fuelLight;
     float randomEventTimer = 0;
     bool gamePlaying = false;
 
@@ -47,7 +48,10 @@ public class GameController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        ranndomEvent();
+        if (gamePlaying == true && !tooltip.isActiveAndEnabled)
+        {
+            ranndomEvent();
+        }
     }
 
     private void ranndomEvent()
@@ -55,14 +59,12 @@ public class GameController : MonoBehaviour
         int eventhit = 2;
         int randomNumber = Random.Range(1, 3);
         randomEventTimer += Time.deltaTime;
-        if (randomEventTimer > 6 ) 
+        if (randomEventTimer > 60 ) 
         {
-            Debug.Log(randomNumber);
-            Debug.Log("eventChance");
             if (randomNumber == eventhit)
             {
-                Debug.Log("randomEvent");
                 randomEventTimer = 0;
+                Debug.Log("RandomCollider disable call");
                 DisableRandomCollider();
             }
             randomEventTimer = 0;
