@@ -515,6 +515,7 @@ MonoBehaviour:
   - {fileID: 1425750211}
   - {fileID: 306722466}
   fuelbutton: 0
+  fuelLight: {fileID: 772664467}
   currentTempature: 0
   tooltip: {fileID: 1258510773}
 --- !u!4 &153522828
@@ -2712,6 +2713,17 @@ RectTransform:
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1211128341195342134, guid: d3fe8e673b7ee3f4a9d961d96b3b019b, type: 3}
   m_PrefabInstance: {fileID: 563031184}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &772664467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6518429377469449447, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
+  m_PrefabInstance: {fileID: 1576773642}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
