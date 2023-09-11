@@ -4441,10 +4441,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FuelButtonPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6068070444444428867, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
-      propertyPath: switchOFF
-      value: 
-      objectReference: {fileID: 1576773643}
     - target: {fileID: 6485991409310927343, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4530,17 +4526,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
---- !u!114 &1576773643 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8370001984538192959, guid: 8da25538e2201424e8db1d5af399a4f7, type: 3}
-  m_PrefabInstance: {fileID: 1576773642}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1587605933 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 968046184422164868, guid: 534df288b10bee14fa5c2ca8fe6fce95, type: 3}
