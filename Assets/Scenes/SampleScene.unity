@@ -516,6 +516,7 @@ MonoBehaviour:
   - {fileID: 306722466}
   fuelbutton: 0
   currentTempature: 0
+  tooltip: {fileID: 1258510773}
 --- !u!4 &153522828
 Transform:
   m_ObjectHideFlags: 0
