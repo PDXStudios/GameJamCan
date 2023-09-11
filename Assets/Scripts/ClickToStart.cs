@@ -32,6 +32,5 @@ public class ClickToStart : MonoBehaviour
             // transform.position += Vector3.Lerp(Vector3.zero, endpoint, 0.25f * Time.deltaTime);
             clickStartButton.gameObject.SetActive(false);
         }
-        Debug.Log(screen);
     }
 }

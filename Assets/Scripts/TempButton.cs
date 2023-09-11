@@ -10,14 +10,13 @@ public class TempButton : MonoBehaviour
     [SerializeField] Image downTemp;
     [SerializeField] TextMeshProUGUI currentTemp;
     [SerializeField] TextMeshProUGUI setTemp;
-
+    [SerializeField] GameController gameController;
     int tempCur;
     int tempSet;
 
 
     private void Start()
     {
-        tempCur = 70;
         tempSet = 70;
     }
 
@@ -25,6 +24,7 @@ public class TempButton : MonoBehaviour
     {
         currentTemp.text = tempCur.ToString();
         setTemp.text = tempSet.ToString();
+        tempCur = gameController.getCurrentTemp();
 
     }
 
