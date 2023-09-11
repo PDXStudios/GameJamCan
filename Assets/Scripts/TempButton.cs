@@ -33,7 +33,7 @@ public class TempButton : MonoBehaviour
             cooling.gameObject.SetActive(false);
             heating.gameObject.SetActive(false);
         }
-        gameController.SetTemp(tempSet);
+        
 
     }
 
@@ -68,7 +68,7 @@ public class TempButton : MonoBehaviour
             cooling.gameObject.SetActive(false);
             heating.gameObject.SetActive(true);
         }
+        gameController.SetTemp(tempSet);
 
-        
     }
 }

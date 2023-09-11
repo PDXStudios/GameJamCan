@@ -73,17 +73,17 @@ public class GameController : MonoBehaviour
         {
             if (currentTempature <= WantedTemp)
             {
-                currentTempature += 1.0f * Time.deltaTime;
+                currentTempature += .2f * Time.deltaTime;
             }
             else if (currentTempature >= WantedTemp)
             {
-                currentTempature -= 1.0f * Time.deltaTime;
+                currentTempature -= .2f * Time.deltaTime;
             }
         }
         else
         {
 
-            currentTempature -= 1.0f * Time.deltaTime;
+            currentTempature -= .2f * Time.deltaTime;
         }
     }
     public int getCurrentTemp()
