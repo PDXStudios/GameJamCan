@@ -42,6 +42,10 @@ public class GameController : MonoBehaviour
     [SerializeField] float temperatureAlarmThreshold = 10.0f;
     [SerializeField] float trackedTime;
     [SerializeField] TextMeshProUGUI timeTracked;
+    [SerializeField] TextMeshProUGUI timeTrackedGO;
+
+    [SerializeField] Image uiErrorHandler;
+    [SerializeField] Image uiGameOverHandler;
 
     private void Start()
     {
@@ -60,8 +64,10 @@ public class GameController : MonoBehaviour
             timeTracker();
             Debugging();
 
-            timeTracked.text = trackedTime.ToString();
+           
         }
+        timeTracked.text = getTrackedTime();
+        timeTrackedGO.text = getTrackedTime();
 
     }
     private void FixedUpdate()
@@ -77,6 +83,10 @@ public class GameController : MonoBehaviour
         if (oxygenAmount < oxygenAlarmThreshold)
         {
             oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
+        }
+        if (oxygenAmount < oxygenAlarmThreshold2)
+        {
+            oxygenAlarmCaution.Play();
         }
         
     }

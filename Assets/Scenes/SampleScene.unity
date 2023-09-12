@@ -651,6 +651,9 @@ MonoBehaviour:
   temperatureAlarmThreshold: 10
   trackedTime: 0
   timeTracked: {fileID: 645311337}
+  timeTrackedGO: {fileID: 1247932049}
+  uiErrorHandler: {fileID: 1821150540}
+  uiGameOverHandler: {fileID: 936069468}
 --- !u!4 &153522828
 Transform:
   m_ObjectHideFlags: 0
@@ -7073,7 +7076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time Since Launch - '
+  m_text: Time Since Launch-
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35e09bfa7e6b9c6479d20ccd3da327e7, type: 2}
   m_sharedMaterial: {fileID: 3474535657914708715, guid: 35e09bfa7e6b9c6479d20ccd3da327e7, type: 2}
