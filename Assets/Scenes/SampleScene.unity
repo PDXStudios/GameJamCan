@@ -777,6 +777,8 @@ MonoBehaviour:
   oxygenAlarmUrgent: {fileID: 1083778902}
   alarmCaution: {fileID: 8300000, guid: 64d475be2c35a8b46aa34b67190dae29, type: 3}
   alarmUrgent: {fileID: 8300000, guid: 64d475be2c35a8b46aa34b67190dae29, type: 3}
+  oxygenCaution: {fileID: 2074369609}
+  oxygenUrgent: {fileID: 711290461}
   temperatureAlarm: {fileID: 449000153}
   temperatureAlarmThreshold: 10
   temperatureAlarmThreshold2: 20
@@ -784,6 +786,8 @@ MonoBehaviour:
   tempAlarmUrgent: {fileID: 65445897}
   tempAlarmCautionClip: {fileID: 8300000, guid: 60720c0d681c0a14d8afa3049fa62ddc, type: 3}
   tempAlarmUrgentClip: {fileID: 8300000, guid: 60720c0d681c0a14d8afa3049fa62ddc, type: 3}
+  tempCaution: {fileID: 1338690724}
+  tempUrgent: {fileID: 1815626398}
   trackedTime: 0
   timeTracked: {fileID: 645311337}
   timeTrackedGO: {fileID: 1247932049}
@@ -4345,7 +4349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &711290460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7446,7 +7450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1338690723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9706,7 +9710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1815626397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11633,7 +11637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2074369608
 RectTransform:
   m_ObjectHideFlags: 0
