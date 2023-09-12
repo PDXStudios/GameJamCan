@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] public float oxygenAmount = 100.00f;
     [SerializeField] public float powerAmount = 100.00f;
     [SerializeField] float oxygenGainAmount = 1.0f;
-    [SerializeField] float oxygenLossAmount =1.0f;
+    [SerializeField] float oxygenLossAmount = 1.0f;
     [SerializeField] Image powerON;
     [SerializeField] Image oxygenON;
     [SerializeField] Image temptureON;
@@ -26,12 +26,12 @@ public class GameController : MonoBehaviour
     [SerializeField] Image fuelLight;
     float randomEventTimer = 0;
     bool gamePlaying = false;
-    [SerializeField] int randomEventInterval = 30; 
+    [SerializeField] int randomEventInterval = 30;
 
     [SerializeField] float currentTemperature;
     [SerializeField] Image tooltip;
     int WantedTemp = 70;
-    
+
     [SerializeField] GameObject oxygenAlarm;
     [SerializeField] int oxygenAlarmThreshold = 40;
     [SerializeField] int oxygenAlarmThreshold2 = 20;
@@ -63,8 +63,9 @@ public class GameController : MonoBehaviour
             TempAlarm();
             timeTracker();
             Debugging();
+            gameOver();
 
-           
+
         }
         timeTracked.text = getTrackedTime();
         timeTrackedGO.text = getTrackedTime();
@@ -88,7 +89,7 @@ public class GameController : MonoBehaviour
         {
             oxygenAlarmCaution.Play();
         }
-        
+
     }
 
     private void TempAlarm()
@@ -107,7 +108,7 @@ public class GameController : MonoBehaviour
         int eventhit = 2;
         int randomNumber = Random.Range(1, 3);
         randomEventTimer += Time.deltaTime;
-        if (randomEventTimer > randomEventInterval ) 
+        if (randomEventTimer > randomEventInterval)
         {
             if (randomNumber == eventhit)
             {
@@ -184,7 +185,7 @@ public class GameController : MonoBehaviour
         {
             fuelAmount += fuelGain * Time.deltaTime;
         }
-        else if(!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
+        else if (!fuelbutton && fuelAmount > 0 && powerON.isActiveAndEnabled)
         {
             fuelAmount -= fuelLoss * Time.deltaTime;
         }
@@ -198,22 +199,22 @@ public class GameController : MonoBehaviour
     public void fuelBoolOff()
     {
         fuelbutton = false;
-    }    
+    }
     private void powerManager()
     {
-        
+
         if (powerON.isActiveAndEnabled && powerAmount < maxFloat && fuelAmount > 0)
         {
             powerAmount += batteryChargeRate * Time.deltaTime;
         }
         else
         {
-            if (powerAmount < - 10) 
+            if (powerAmount < -10)
             {
                 powerAmount = -10;
             }
             powerAmount -= batteryDischargeRate * Time.deltaTime;
-            
+
         }
     }
     private void OxygenManager()
@@ -270,6 +271,22 @@ public class GameController : MonoBehaviour
         string formatedTime = ($"{hours:00}:{minutes:00}:{seconds:00}");
 
         return formatedTime;
+    }
+
+    private void gameOver()
+    {
+        if (oxygenAmount <= 0) 
+        {
+            //disable all alarms
+            gamePlaying = false;
+            // show ui for gameover screen and switch off mainscreen ui
+        }
+        if (currentTemperature <= 0)
+        {
+            //disable all alarms
+            gamePlaying = false;
+            // show ui for gameover screen and switch off mainscreen ui
+        }
     }
 
 
