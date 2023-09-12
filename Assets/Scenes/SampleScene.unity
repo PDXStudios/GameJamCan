@@ -418,7 +418,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.509
+  m_Volume: 0.493
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -780,7 +780,7 @@ MonoBehaviour:
   oxygenCaution: {fileID: 2074369609}
   oxygenUrgent: {fileID: 711290461}
   temperatureAlarm: {fileID: 449000153}
-  temperatureAlarmThreshold: 10
+  temperatureAlarmThreshold: 50
   temperatureAlarmThreshold2: 20
   tempAlarmCaution: {fileID: 449000154}
   tempAlarmUrgent: {fileID: 65445897}

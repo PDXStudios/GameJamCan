@@ -146,7 +146,7 @@ public class GameController : MonoBehaviour
             if(!hasPlayedTempCaution)
             {
                 tempAlarmCaution.PlayOneShot(tempAlarmCautionClip);
-                hasPlayedCaution = true;
+                hasPlayedTempCaution = true;
                 tempCaution.gameObject.SetActive(true);
             }
         }
