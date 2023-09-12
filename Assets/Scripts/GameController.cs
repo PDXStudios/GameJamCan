@@ -64,10 +64,13 @@ public class GameController : MonoBehaviour
 
     [SerializeField] Image uiErrorHandler;
     [SerializeField] Image uiGameOverHandler;
+    [SerializeField] GameObject backGroundMusic;
+    [SerializeField] GameObject mainMenuMusic;
 
     private void Start()
     {
         currentTemperature = 70.0f;
+        mainMenuMusic.SetActive(true);
     }
     private void Update()
     {
@@ -82,7 +85,8 @@ public class GameController : MonoBehaviour
             timeTracker();
             Debugging();
             gameOver();
-
+            mainMenuMusic.SetActive(false);
+            backGroundMusic.SetActive(true); 
 
         }
         timeTracked.text = getTrackedTime();
