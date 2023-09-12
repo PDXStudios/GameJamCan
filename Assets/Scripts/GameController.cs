@@ -27,17 +27,17 @@ public class GameController : MonoBehaviour
     bool gamePlaying = false;
     [SerializeField] int randomEventInterval = 30; 
 
-    [SerializeField] float currentTempature;
+    [SerializeField] float currentTemperature;
     [SerializeField] Image tooltip;
     int WantedTemp = 70;
     [SerializeField] GameObject oxygenAlarm;
     [SerializeField] int oxygenAlarmThreshold = 10;
-    [SerializeField] GameObject temptureAlarm;
-    [SerializeField] float temptureAlarmThreshold = 10.0f;
+    [SerializeField] GameObject temperatureAlarm;
+    [SerializeField] float temperatureAlarmThreshold = 10.0f;
 
     private void Start()
     {
-        currentTempature = 70.0f;
+        currentTemperature = 70.0f;
     }
     private void Update()
     {
@@ -75,13 +75,13 @@ public class GameController : MonoBehaviour
 
     private void TempAlarm()
     {
-        if (currentTempature < temptureAlarmThreshold)
+        if (currentTemperature < temperatureAlarmThreshold)
         {
-            temptureAlarm.SetActive(true);
+            temperatureAlarm.SetActive(true);
         }
         else
         {
-            temptureAlarm.SetActive(false);
+            temperatureAlarm.SetActive(false);
         }
     }
     private void ranndomEvent()
@@ -104,25 +104,25 @@ public class GameController : MonoBehaviour
     {
         if (temptureON.isActiveAndEnabled)
         {
-            if (currentTempature <= WantedTemp)
+            if (currentTemperature <= WantedTemp)
             {
-                currentTempature += .2f * Time.deltaTime;
+                currentTemperature += .2f * Time.deltaTime;
             }
-            else if (currentTempature >= WantedTemp)
+            else if (currentTemperature >= WantedTemp)
             {
-                currentTempature -= .2f * Time.deltaTime;
+                currentTemperature -= .2f * Time.deltaTime;
             }
         }
         else
         {
 
-            currentTempature -= .2f * Time.deltaTime;
+            currentTemperature -= .2f * Time.deltaTime;
         }
     }
     public int getCurrentTemp()
     {
         // returns current temp
-        int tempint = (int)Mathf.Round(currentTempature);
+        int tempint = (int)Mathf.Round(currentTemperature);
         return tempint;
     }
 
