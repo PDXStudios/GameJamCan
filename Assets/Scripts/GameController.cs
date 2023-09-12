@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -30,11 +31,17 @@ public class GameController : MonoBehaviour
     [SerializeField] float currentTemperature;
     [SerializeField] Image tooltip;
     int WantedTemp = 70;
+    
     [SerializeField] GameObject oxygenAlarm;
-    [SerializeField] int oxygenAlarmThreshold = 10;
+    [SerializeField] int oxygenAlarmThreshold = 40;
+    [SerializeField] int oxygenAlarmThreshold2 = 20;
+    [SerializeField] AudioSource oxygenAlarmCaution;
+    [SerializeField] AudioClip alarmCaution;
+
     [SerializeField] GameObject temperatureAlarm;
     [SerializeField] float temperatureAlarmThreshold = 10.0f;
     [SerializeField] float trackedTime;
+    [SerializeField] TextMeshProUGUI timeTracked;
 
     private void Start()
     {
@@ -52,6 +59,8 @@ public class GameController : MonoBehaviour
             TempAlarm();
             timeTracker();
             Debugging();
+
+            timeTracked.text = trackedTime.ToString();
         }
 
     }
@@ -67,12 +76,9 @@ public class GameController : MonoBehaviour
     {
         if (oxygenAmount < oxygenAlarmThreshold)
         {
-            oxygenAlarm.SetActive(true);
+            oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
         }
-        else
-        {
-            oxygenAlarm.SetActive(false);
-        }
+        
     }
 
     private void TempAlarm()
