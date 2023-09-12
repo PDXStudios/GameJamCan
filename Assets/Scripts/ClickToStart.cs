@@ -16,7 +16,7 @@ public class ClickToStart : MonoBehaviour
 
     public void ClickStart()
     {
-        audioSource.gameObject.SetActive(true);
+        audioSource.PlayOneShot(beep);
         atEnd = false;
         gameController.setPlayState(true);
         
