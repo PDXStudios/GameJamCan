@@ -141,7 +141,7 @@ public class GameController : MonoBehaviour
                 hasStartedTempLoop = true;
             }
         }
-        else if (currentTemperature <temperatureAlarmThreshold)
+        else if (currentTemperature < temperatureAlarmThreshold)
         {
             if(!hasPlayedTempCaution)
             {
@@ -363,18 +363,19 @@ public class GameController : MonoBehaviour
 
     private void gameOver()
     {
-        if (oxygenAmount <= 0) 
+        if (oxygenAmount <= 0 || currentTemperature <= 0) 
         {
             //disable all alarms
+            SilenceOxygenAlarm();
+            SilenceTempAlarn();
+
             gamePlaying = false;
+
             // show ui for gameover screen and switch off mainscreen ui
+            uiErrorHandler.gameObject.SetActive(false);
+            uiGameOverHandler.gameObject.SetActive(true);
         }
-        if (currentTemperature <= 0)
-        {
-            //disable all alarms
-            gamePlaying = false;
-            // show ui for gameover screen and switch off mainscreen ui
-        }
+        
     }
 
 
