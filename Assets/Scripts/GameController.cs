@@ -83,9 +83,25 @@ public class GameController : MonoBehaviour
         if (oxygenAmount < oxygenAlarmThreshold)
         {
             oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
+
+            if (oxygenAmount < oxygenAlarmThreshold2)
+            {
+                oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
+
+                //oxygenAlarmCaution.loop = true;
+                //oxygenAlarmCaution.volume = .03f;
+                //oxygenAlarmCaution.Play();
+
+                Debug.Log("20$");
+            }
         }
+
         if (oxygenAmount < oxygenAlarmThreshold2)
         {
+            oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
+
+            oxygenAlarmCaution.loop = true;
+            oxygenAlarmCaution.volume = .03f;
             oxygenAlarmCaution.Play();
         }
         
