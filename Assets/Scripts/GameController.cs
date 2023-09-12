@@ -36,10 +36,28 @@ public class GameController : MonoBehaviour
     [SerializeField] int oxygenAlarmThreshold = 40;
     [SerializeField] int oxygenAlarmThreshold2 = 20;
     [SerializeField] AudioSource oxygenAlarmCaution;
+    [SerializeField] AudioSource oxygenAlarmUrgent;
     [SerializeField] AudioClip alarmCaution;
+    [SerializeField] AudioClip alarmUrgent;
+    private bool hasPlayedCaution = false;
+    private bool hasStartedLoop = false;
+    private bool alarmSilenced = false;
+    [SerializeField] Image oxygenCaution;
+    [SerializeField] Image oxygenUrgent;
 
     [SerializeField] GameObject temperatureAlarm;
-    [SerializeField] float temperatureAlarmThreshold = 10.0f;
+    [SerializeField] float temperatureAlarmThreshold = 50;
+    [SerializeField] float temperatureAlarmThreshold2 = 20;
+    [SerializeField] AudioSource tempAlarmCaution;
+    [SerializeField] AudioSource tempAlarmUrgent;
+    [SerializeField] AudioClip tempAlarmCautionClip;
+    [SerializeField] AudioClip tempAlarmUrgentClip;
+    private bool hasPlayedTempCaution = false;
+    private bool hasStartedTempLoop = false;
+    private bool alarmTempSilenced = false;
+    [SerializeField] Image tempCaution;
+    [SerializeField] Image tempUrgent;
+
     [SerializeField] float trackedTime;
     [SerializeField] TextMeshProUGUI timeTracked;
     [SerializeField] TextMeshProUGUI timeTrackedGO;
@@ -81,43 +99,97 @@ public class GameController : MonoBehaviour
 
     private void OxygenAlert()
     {
-        if (oxygenAmount < oxygenAlarmThreshold)
-        {
-            oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
-
-            if (oxygenAmount < oxygenAlarmThreshold2)
-            {
-                oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
-
-                //oxygenAlarmCaution.loop = true;
-                //oxygenAlarmCaution.volume = .03f;
-                //oxygenAlarmCaution.Play();
-
-                Debug.Log("20$");
-            }
-        }
-
         if (oxygenAmount < oxygenAlarmThreshold2)
         {
-            oxygenAlarmCaution.PlayOneShot(alarmCaution, .03f);
-
-            oxygenAlarmCaution.loop = true;
-            oxygenAlarmCaution.volume = .03f;
-            oxygenAlarmCaution.Play();
+            if (!hasStartedLoop && !alarmSilenced)
+            {
+                oxygenUrgent.gameObject.SetActive(true);
+                oxygenAlarmUrgent.loop = true;
+                oxygenAlarmUrgent.clip = alarmUrgent;
+                oxygenAlarmUrgent.Play();
+                hasStartedLoop = true;
+            }
+        }
+        else if (oxygenAmount < oxygenAlarmThreshold)
+        {
+            if (!hasPlayedCaution)
+            {
+                oxygenAlarmCaution.PlayOneShot(alarmCaution);
+                hasPlayedCaution = true;
+                oxygenCaution.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            ResetAlarms();
+            oxygenCaution.gameObject.SetActive(false);
+            oxygenUrgent.gameObject.SetActive(false);
         }
 
     }
 
     private void TempAlarm()
     {
-        if (currentTemperature < temperatureAlarmThreshold)
+        if (currentTemperature < temperatureAlarmThreshold2)
         {
-            temperatureAlarm.SetActive(true);
+            if(!hasStartedTempLoop && !alarmTempSilenced)
+            {
+                tempUrgent.gameObject.SetActive(true); ;
+                tempAlarmUrgent.loop = true;
+                tempAlarmUrgent.clip = tempAlarmUrgentClip;
+                tempAlarmUrgent.Play();
+                hasStartedTempLoop = true;
+            }
+        }
+        else if (currentTemperature <temperatureAlarmThreshold)
+        {
+            if(!hasPlayedTempCaution)
+            {
+                tempAlarmCaution.PlayOneShot(tempAlarmCautionClip);
+                hasPlayedCaution = true;
+                tempCaution.gameObject.SetActive(true);
+            }
         }
         else
         {
-            temperatureAlarm.SetActive(false);
+            ResetTempAlarms();
+            tempCaution.gameObject.SetActive(false);
+            tempUrgent.gameObject.SetActive(false);
         }
+    }
+
+    public void SilenceOxygenAlarm()
+    {
+        if (hasStartedLoop)
+        {
+            oxygenAlarmUrgent.Stop();
+            alarmSilenced = true;
+        }
+    }
+
+    public void SilenceTempAlarn()
+    {
+        if(hasStartedTempLoop)
+        {
+            tempAlarmUrgent.Stop();
+            alarmTempSilenced = true;
+        }
+    }
+
+    public void ResetAlarms()
+    {
+        hasPlayedCaution = false;
+        hasStartedLoop = false;
+        alarmSilenced = false;
+        oxygenAlarmUrgent.Stop();
+    }
+
+    public void ResetTempAlarms()
+    {
+        hasPlayedTempCaution = false;
+        hasStartedTempLoop = false;
+        alarmTempSilenced = false;
+        tempAlarmUrgent.Stop();
     }
     private void ranndomEvent()
     {
