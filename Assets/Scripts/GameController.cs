@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
     [SerializeField] int oxygenAlarmThreshold = 10;
     [SerializeField] GameObject temperatureAlarm;
     [SerializeField] float temperatureAlarmThreshold = 10.0f;
+    [SerializeField] float trackedTime;
 
     private void Start()
     {
@@ -49,6 +50,7 @@ public class GameController : MonoBehaviour
             TempManager();
             OxygenAlert();
             TempAlarm();
+            timeTracker();
             Debugging();
         }
 
@@ -236,6 +238,15 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void timeTracker()
+    {
+        trackedTime += Time.deltaTime;
+        Debug.Log(trackedTime);
+    }
+    public float getTrackedTime()
+    {
+        return trackedTime;
+    }
 
 
 
