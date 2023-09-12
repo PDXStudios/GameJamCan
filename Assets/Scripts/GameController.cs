@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float currentTempature;
     [SerializeField] Image tooltip;
     int WantedTemp = 70;
+    [SerializeField] GameObject oxygenAlarm;
 
     private void Start()
     {
@@ -43,6 +44,7 @@ public class GameController : MonoBehaviour
             OxygenManager();
             FuelManager();
             TempManager();
+            OxygenAlert();
             Debugging();
         }
 
@@ -55,6 +57,17 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void OxygenAlert()
+    {
+        if (oxygenAmount < 20)
+        {
+            oxygenAlarm.SetActive(true);
+        }
+        else
+        {
+            oxygenAlarm.SetActive(false);
+        }
+    }
     private void ranndomEvent()
     {
         int eventhit = 2;
