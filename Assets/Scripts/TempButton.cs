@@ -12,6 +12,8 @@ public class TempButton : MonoBehaviour
     [SerializeField] TextMeshProUGUI setTemp;
     [SerializeField] Image heating;
     [SerializeField] Image cooling;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip tempClip;
 
     [SerializeField] GameController gameController;
     int tempCur;
@@ -42,6 +44,7 @@ public class TempButton : MonoBehaviour
         currentTemp.gameObject.SetActive(false);
         setTemp.gameObject.SetActive(true);
         tempSet++;
+        audioSource.PlayOneShot(tempClip);
         
     }
 
@@ -50,7 +53,8 @@ public class TempButton : MonoBehaviour
         currentTemp.gameObject.SetActive(false);
         setTemp.gameObject.SetActive(true);
         tempSet--;
-        
+        audioSource.PlayOneShot(tempClip);
+
     }
 
     public void SetTemp()
@@ -69,6 +73,7 @@ public class TempButton : MonoBehaviour
             heating.gameObject.SetActive(true);
         }
         gameController.SetTemp(tempSet);
+        audioSource.PlayOneShot(tempClip);
 
     }
 }
