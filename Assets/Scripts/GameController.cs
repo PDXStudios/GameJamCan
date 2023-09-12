@@ -247,11 +247,19 @@ public class GameController : MonoBehaviour
     private void timeTracker()
     {
         trackedTime += Time.deltaTime;
-        Debug.Log(trackedTime);
     }
-    public float getTrackedTime()
+    public string getTrackedTime()
     {
-        return trackedTime;
+        int totalSeconds = (int)Mathf.Round(trackedTime);
+        int hours = totalSeconds / 3600;
+        int remainderAfterHours = totalSeconds % 3600;
+
+        int minutes = remainderAfterHours / 60;
+        int seconds = remainderAfterHours % 60;
+
+        string formatedTime = ($"{hours:00}:{minutes:00}:{seconds:00}");
+
+        return formatedTime;
     }
 
 
