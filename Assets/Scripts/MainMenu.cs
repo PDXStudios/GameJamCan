@@ -16,4 +16,8 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit was called From the ui menu :)");
         Application.Quit();
     }
+    public void restart()
+    {
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+    }
 }
